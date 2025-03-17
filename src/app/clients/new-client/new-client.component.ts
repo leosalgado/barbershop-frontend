@@ -22,6 +22,8 @@ import { SnackbarManagerService } from '../../services/snackbar-manager.service'
 export class NewClientComponent implements OnDestroy {
   private httpSubscription?: Subscription;
 
+  private routeSubscription?: Subscription;
+
   constructor(
     @Inject(SERVICES_TOKEN.HTTP.CLIENT)
     private readonly httpService: IClientService,
